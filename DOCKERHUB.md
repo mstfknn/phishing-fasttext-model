@@ -62,3 +62,8 @@ docker run -p 8080:8080 -v /local/path/phishing_model.bin:/app/phishing_model.bi
 ## 📄 License
 
 MIT License © [mstfknn](https://hub.docker.com/u/mstfknn)
+
+---
+## 🔗 Links
+- 🤗 [Hugging Face Model](https://huggingface.co/mstfknn/phishing-fasttext-model)
+- 💻 [GitHub Repository](https://github.com/mstfknn/phishing-fasttext-model)
