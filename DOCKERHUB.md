@@ -55,7 +55,7 @@ docker run -p 8080:8080 -v /local/path/phishing_model.bin:/app/phishing_model.bi
 
 - **Framework**: FastText
 - **Labels**: `__label__phishing`, `__label__clean`
-- **Training data**: [mstfknn/phishing-domain-list-2m-plus](https://huggingface.co/mstfknn/phishing-domain-list-2m-plus)
+- **Training data**: [mstfknn/phishing-domain-list-2m-plus](https://huggingface.co/datasets/mstfknn/phishing-domain-list-2m-plus)
 
 ---
 

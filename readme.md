@@ -67,7 +67,7 @@ Example response:
 
 ## 📊 Dataset
 
-The model was trained on **[mstfknn/phishing-domain-list-2m-plus](https://huggingface.co/mstfknn/phishing-domain-list-2m-plus)**,  
+The model was trained on **[mstfknn/phishing-domain-list-2m-plus](https://huggingface.co/datasets/mstfknn/phishing-domain-list-2m-plus)**,  
 a dataset with **2,000,000 domain names** labeled as either phishing or clean.  
 
 ---
