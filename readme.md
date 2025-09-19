@@ -76,6 +76,8 @@ a dataset with **2,000,000 domain names** labeled as either phishing or clean.
 
 This project is licensed under the MIT License.  
 
+---
+
 ## 🔗 Links
 
 - 🤗 [Hugging Face Model](https://huggingface.co/mstfknn/phishing-fasttext-model)
