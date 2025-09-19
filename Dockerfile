@@ -1,4 +1,4 @@
-FROM python:3.11-slim-bookworm
+FROM python:3-slim 
 
 # Install FastText dependencies and clean up
 RUN apt-get update && apt-get install -y --no-install-recommends \
