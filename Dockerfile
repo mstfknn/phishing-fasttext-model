@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /app
 
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt && pip install --no-cache-dir "numpy<2"
 
 # Download model from Hugging Face
 ADD https://huggingface.co/mstfknn/phishing-fasttext-model/resolve/main/phishing_model.bin /app/phishing_model.bin
