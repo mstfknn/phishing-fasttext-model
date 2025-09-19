@@ -22,9 +22,24 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      - name: Extract Docker metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: mstfknn/phishing-fasttext
+          tags: |
+            type=raw,value=latest
+          labels: |
+            org.opencontainers.image.title=Phishing Detection Model (FastText)
+            org.opencontainers.image.description=Lightweight FastText model to classify domains as phishing or clean.
+          flavor: |
+            latest=true
+          readme-file: ./DOCKERHUB.md
+
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
           context: .
           push: true
-          tags: mstfknn/phishing-fasttext:latest
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
