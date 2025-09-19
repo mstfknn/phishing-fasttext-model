@@ -1,17 +1,17 @@
-FROM python:3.11-slim
+FROM python:3.11-slim-bookworm
 
-# FastText için gerekli bağımlılıklar
-RUN apt-get update && apt-get install -y \
+# Install FastText dependencies and clean up
+RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     cmake \
-    && rm -rf /var/lib/apt/lists/*
+ && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 WORKDIR /app
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Modeli Hugging Face'den indir
+# Download model from Hugging Face
 ADD https://huggingface.co/mstfknn/phishing-fasttext-model/resolve/main/phishing_model.bin /app/phishing_model.bin
 
 COPY app.py .
