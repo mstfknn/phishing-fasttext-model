@@ -1,4 +1,4 @@
-# 🛡️ Phishing Detection Model (FastText)
+# 🛡️ Phishing Detection Model ([FastText](https://github.com/facebookresearch/fastText))
 
 A lightweight FastText-based model to classify domain names as **phishing** or **clean**.  
 It uses supervised learning with `wordNgrams=2` for better n-gram feature coverage.  
